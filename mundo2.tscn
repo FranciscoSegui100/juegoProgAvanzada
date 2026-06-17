@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://d050awpvivfqv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_espnt"]
+size = Vector2(283, 41)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nxsxj"]
+size = Vector2(312, 42.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0qo4"]
+size = Vector2(148, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v7ikv"]
+size = Vector2(148, 21)
+
+[node name="mundo 2" type="Node2D" unique_id=1210070498]
+
+[node name="Suelo" type="StaticBody2D" parent="." unique_id=918771942]
+position = Vector2(576, 400)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Suelo" unique_id=41660367]
+position = Vector2(-432.75, 190)
+shape = SubResource("RectangleShape2D_espnt")
+
+[node name="ColorRect3" type="ColorRect" parent="Suelo/CollisionShape2D3" unique_id=591297460]
+offset_left = -143.75
+offset_top = -21.0
+offset_right = 143.25
+offset_bottom = 22.0
+color = Color(0.50928617, 0.50928617, 0.50928617, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Suelo/CollisionShape2D3" unique_id=1760158791]
+offset_left = 253.75
+offset_top = -26.0
+offset_right = 565.75
+offset_bottom = 17.0
+color = Color(0.50928617, 0.50928617, 0.50928617, 1)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Suelo" unique_id=100638970]
+position = Vector2(437.5, 182.5)
+shape = SubResource("RectangleShape2D_espnt")
+
+[node name="ColorRect2" type="ColorRect" parent="Suelo/CollisionShape2D2" unique_id=1508541074]
+offset_left = -142.5
+offset_top = -21.0
+offset_right = 137.625
+offset_bottom = 21.0
+color = Color(0.50928617, 0.50928617, 0.50928617, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo" unique_id=953303803]
+position = Vector2(-23, 185.625)
+shape = SubResource("RectangleShape2D_nxsxj")
+
+[node name="plataforma" type="CollisionShape2D" parent="Suelo" unique_id=1892238538]
+position = Vector2(-22, 107)
+shape = SubResource("RectangleShape2D_q0qo4")
+
+[node name="ColorRect" type="ColorRect" parent="Suelo/plataforma" unique_id=1106506564]
+offset_left = -74.0
+offset_top = -10.0
+offset_right = 74.0
+offset_bottom = 10.0
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Suelo" unique_id=1088940980]
+position = Vector2(468, 107.5)
+shape = SubResource("RectangleShape2D_v7ikv")
+
+[node name="ColorRect" type="ColorRect" parent="Suelo" unique_id=1646790044]
+offset_left = 394.0
+offset_top = 97.0
+offset_right = 542.0
+offset_bottom = 118.0
