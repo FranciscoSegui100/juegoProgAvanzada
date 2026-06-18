@@ -1,8 +1,8 @@
 extends Area2D
 
-@export var velocidad = 820.0
-@export var limite_izquierdo = 2100.0
-@export var limite_derecho = 2320.0
+@export var velocidad = 300.0
+@export var limite_izquierdo = 1650.0
+@export var limite_derecho = 1910.0
 
 var direccion = 1 # 1 = Derecha, -1 = Izquierda
 

@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://t1td06j5i7ci" path="res://enemigo.tscn" id="3_fw4w5"]
 [ext_resource type="Script" uid="uid://hbr2t245h0k7" path="res://enemigo3.gd" id="4_aou4a"]
 [ext_resource type="Script" uid="uid://n17ua8c5k7ll" path="res://enemigo2.gd" id="4_otwa2"]
-[ext_resource type="Script" uid="uid://drkpylgkx3jtu" path="res://enemigo4.gd" id="5_5ckkb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aou4a"]
 size = Vector2(39, 48)
@@ -14,7 +13,7 @@ size = Vector2(39, 48)
 size = Vector2(466, 43)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ckkb"]
-size = Vector2(502, 22)
+size = Vector2(549.5, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lgngo"]
 size = Vector2(200, 20)
@@ -29,19 +28,16 @@ friction = 0.39
 size = Vector2(19.999865, 199.99965)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2hh7m"]
-size = Vector2(258.2422, 39.75)
+size = Vector2(276, 41)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t8jxu"]
 size = Vector2(312, 42.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pfhxm"]
-size = Vector2(225.58374, 20)
+size = Vector2(229, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pij3u"]
-size = Vector2(152, 21)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0oi55"]
-size = Vector2(258.28674, 20)
+size = Vector2(148, 21)
 
 [node name="Mundo" type="Node2D" unique_id=353064206]
 script = ExtResource("1_lgngo")
@@ -59,9 +55,8 @@ offset_left = -20.0
 offset_top = -50.0
 offset_right = 20.0
 color = Color(0.28892347, 0.7774376, 0, 1)
-metadata/_edit_use_anchors_ = true
 
-[node name="Camera2D" type="Camera2D" parent="Jugador" unique_id=1246125471]
+[node name="Camera2D" type="Camera2D" parent="Jugador" unique_id=1663232286]
 
 [node name="Suelo" type="StaticBody2D" parent="." unique_id=896886237]
 position = Vector2(576, 400)
@@ -80,12 +75,12 @@ color = Color(0.50928617, 0.50928617, 0.50928617, 1)
 [node name="ColorRect2" type="ColorRect" parent="Suelo" unique_id=1386213408]
 offset_left = 28.0
 offset_top = 8.0
-offset_right = 530.0
+offset_right = 578.0
 offset_bottom = 30.0
 color = Color(0.50928617, 0.50928617, 0.50928617, 1)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Suelo" unique_id=1093570652]
-position = Vector2(279, 19)
+position = Vector2(302.75, 19)
 shape = SubResource("RectangleShape2D_5ckkb")
 
 [node name="Plataforma1" type="StaticBody2D" parent="." unique_id=54754175]
@@ -134,9 +129,11 @@ shape = SubResource("RectangleShape2D_otwa2")
 
 [node name="Enemigo" parent="." unique_id=473241796 instance=ExtResource("3_fw4w5")]
 position = Vector2(82, 355)
+collision_layer = 0
 
 [node name="Enemigo2" parent="." unique_id=662716785 instance=ExtResource("3_fw4w5")]
 position = Vector2(1646, 357)
+collision_mask = 0
 script = ExtResource("4_otwa2")
 velocidad = 300.0
 limite_izquierdo = 1650.0
@@ -144,34 +141,35 @@ limite_derecho = 1910.0
 
 [node name="Enemigo3" parent="." unique_id=1952181415 instance=ExtResource("3_fw4w5")]
 position = Vector2(2119, 356)
+collision_mask = 0
 script = ExtResource("4_aou4a")
-velocidad = 820.0
+velocidad = 320.0
 limite_izquierdo = 2100.0
 limite_derecho = 2320.0
 
 [node name="Suelo2" type="StaticBody2D" parent="." unique_id=1225077023]
 position = Vector2(1789, 215)
 
-[node name="piso2Mudno2" type="CollisionShape2D" parent="Suelo2" unique_id=793276441]
-position = Vector2(-436.41406, 197.875)
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Suelo2" unique_id=793276441]
+position = Vector2(-432.75, 190)
 shape = SubResource("RectangleShape2D_2hh7m")
 
-[node name="ColorRect" type="ColorRect" parent="Suelo2/piso2Mudno2" unique_id=1970505231]
-offset_left = -130.0
-offset_top = -20.0
-offset_right = 131.34375
-offset_bottom = 20.0
+[node name="ColorRect" type="ColorRect" parent="Suelo2/CollisionShape2D3" unique_id=1970505231]
+offset_left = 253.75
+offset_top = -26.0
+offset_right = 565.75
+offset_bottom = 17.0
 color = Color(0.50928617, 0.50928617, 0.50928617, 1)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Suelo2" unique_id=882420108]
-position = Vector2(429.8789, 183)
+position = Vector2(434, 182.5)
 shape = SubResource("RectangleShape2D_2hh7m")
 
 [node name="ColorRect2" type="ColorRect" parent="Suelo2/CollisionShape2D2" unique_id=1827649978]
-offset_left = -131.0
-offset_top = -22.0
-offset_right = 128.82813
-offset_bottom = 20.0
+offset_left = -142.5
+offset_top = -21.0
+offset_right = 137.625
+offset_bottom = 21.0
 color = Color(0.50928617, 0.50928617, 0.50928617, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo2" unique_id=96788874]
@@ -179,67 +177,29 @@ position = Vector2(-23, 185.625)
 shape = SubResource("RectangleShape2D_t8jxu")
 
 [node name="ColorRect1nivel2" type="ColorRect" parent="Suelo2/CollisionShape2D" unique_id=6516462]
-offset_left = -156.0
-offset_top = -21.625
-offset_right = 156.0
-offset_bottom = 21.375
+offset_left = -549.0
+offset_top = -16.625
+offset_right = -237.0
+offset_bottom = 25.375
 color = Color(0.50928617, 0.50928617, 0.50928617, 1)
 
 [node name="plataforma" type="CollisionShape2D" parent="Suelo2" unique_id=1951638943]
-position = Vector2(-11, 89)
+position = Vector2(-3.5, 93)
 shape = SubResource("RectangleShape2D_pfhxm")
 
 [node name="Polygon2D" type="Polygon2D" parent="Suelo2/plataforma" unique_id=54955934]
-position = Vector2(-1, 0)
-polygon = PackedVector2Array(-114.5, -11, -114.5, 10, 11.0121155, 10.000008, 114.5, 10, 114.5, -11)
+polygon = PackedVector2Array(-114.5, -11, -114.5, 10, 114.5, 10, 114.5, -11)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Suelo2" unique_id=1544171531]
-position = Vector2(431, 92)
+position = Vector2(433, 92)
 shape = SubResource("RectangleShape2D_pij3u")
 
 [node name="ColorRect" type="ColorRect" parent="Suelo2" unique_id=695216558]
-offset_left = 355.0
+offset_left = 359.0
 offset_top = 82.0
 offset_right = 507.0
 offset_bottom = 103.0
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1296419619]
-position = Vector2(2, 0)
-
-[node name="StaticBody2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=900157206]
-position = Vector2(2530.7114, 314.52438)
-rotation = -0.49741888
-scale = Vector2(0.99999994, 0.99999994)
-shape = SubResource("RectangleShape2D_0oi55")
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D2/StaticBody2D" unique_id=1130290166]
-offset_left = -129.70883
-offset_top = -9.52745
-offset_right = 130.76468
-offset_bottom = 10.723771
-rotation = 0.0034906585
-
-[node name="StaticBody2D2" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1780880446]
-position = Vector2(2908, 317.99994)
-rotation = -5.7229347
-scale = Vector2(0.99999994, 0.99999994)
-shape = SubResource("RectangleShape2D_0oi55")
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D2/StaticBody2D2" unique_id=552863264]
-offset_left = -128.98099
-offset_top = -10.743873
-offset_right = 129.17868
-offset_bottom = 10.5237055
-rotation = 0.008726646
-
-[node name="Enemigo4" parent="StaticBody2D2" unique_id=741889071 instance=ExtResource("3_fw4w5")]
-position = Vector2(2735, 222)
-script = ExtResource("5_5ckkb")
-velocidad = 80.0
-limite_abajo = 190.0
-limite_arriba = 280.0
-
 [connection signal="body_entered" from="Enemigo" to="Jugador" method="_on_body_entered"]
 [connection signal="body_entered" from="Enemigo2" to="Jugador" method="_on_body_entered"]
 [connection signal="body_entered" from="Enemigo3" to="Jugador" method="_on_body_entered"]
-[connection signal="body_entered" from="StaticBody2D2/Enemigo4" to="Jugador" method="_on_body_entered"]

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const VELOCIDAD = 200.0
+const VELOCIDAD = 240.0
 const FUERZA_SALTO = -480.0
 const GRAVEDAD = 1100.0
 
@@ -24,16 +24,16 @@ func _physics_process(delta):
 
 	# Recoger frijol
 # Recoger frijol
-	if mundo.intentos < 3:
+	if mundo.intentos < 9:
 		var dist_frijol = global_position.distance_to(mundo.posicion_frijol)
-		if dist_frijol < 30:
+		if dist_frijol < 40 :
 			mundo.intentos += 1
 			# 1. Le avisamos al mundo que cambie la posición del frijol HOY MISMO
 			mundo.actualizar_posicion_frijol()
 
 	# Llegar a la meta
-	var dist_meta = global_position.distance_to(Vector2(1590, 390))
-	if dist_meta < 30:
+	var dist_meta = global_position.distance_to(Vector2(3020, 320))
+	if dist_meta < 40:
 		
 		get_tree().quit()
 		
