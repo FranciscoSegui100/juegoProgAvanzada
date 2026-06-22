@@ -1,6 +1,47 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1781124222
-icon.svg::CompressedTexture2D::7721390702479817176::1779494647::1779494651::1::::<><><>0<>0<>c7758ac9e267cb7bf056d8b655488389<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-jugador.gd::GDScript::7291124022084599819::1779497297::0::1::::<>CharacterBody2D<><>0<>0<><>::
-mundo.gd::GDScript::5214851829120057592::1779497061::0::1::::<>Node2D<><>0<>0<><>::
-mundo.tscn::PackedScene::4489772562672582625::1779552018::0::1::::<><><>0<>0<><>::uid://db440n8x04ruh::::res://jugador.gd<>uid://cgkd328bciee7::::res://mundo.gd
+::res://::1781908771
+enemigo2.gd::GDScript::968107499656537009::1781747145::0::1::::<>Area2D<><>0<>0<><>::
+enemigo3.gd::GDScript::494467729544142288::1781747145::0::1::::<>Area2D<><>0<>0<><>::
+enemigo4.gd::GDScript::8374070371923545550::1781747145::0::1::::<>Area2D<><>0<>0<><>::
+enemigo.gd::GDScript::1327257131336908491::1781747145::0::1::::<>Area2D<><>0<>0<><>::
+enemigo.tscn::PackedScene::1388422192394497868::1781906290::0::1::::<><><>0<>0<><>::uid://s56y4cy72o64::::res://enemigo.gd
+global_script_class_cache.cfg::TextFile::-1::1781747145::0::1::::<><><>0<>0<><>::
+icon.svg::CompressedTexture2D::7721390702479817176::1781747145::1781902271::1::::<><><>0<>0<>c7758ac9e267cb7bf056d8b655488389<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+jugador.gd::GDScript::7291124022084599819::1781747145::0::1::::<>CharacterBody2D<><>0<>0<><>::
+mundo2.tscn::PackedScene::8977433579122503377::1781747145::0::1::::<><><>0<>0<><>::
+mundo.gd::GDScript::5214851829120057592::1781906929::0::1::::<>Node2D<><>0<>0<><>::
+mundo.tscn::PackedScene::4489772562672582625::1781907329::0::1::::<><><>0<>0<><>::uid://db440n8x04ruh::::res://jugador.gd<>uid://cgkd328bciee7::::res://mundo.gd<>uid://cun6xumxj0keh::::res://sprites/XGr30D.jpg<>uid://t1td06j5i7ci::::res://enemigo.tscn<>uid://hbr2t245h0k7::::res://enemigo3.gd<>uid://n17ua8c5k7ll::::res://enemigo2.gd<>uid://bedwvwl3sqcgl::::res://sprites/image-Photoroom (11).png<>uid://drkpylgkx3jtu::::res://enemigo4.gd<>uid://bagi4rre0j0i8::::res://sprites/image-Photoroom (14).png<>uid://cgk2spu0w1ycw::::res://sprites/image-Photoroom (13).png<>uid://d3b0rec3tlj7f::::res://sprites/meta.png
+scene_groups_cache.cfg::TextFile::-1::1781747145::0::1::::<><><>0<>0<><>::
+::res://editor/::1781747145
+editor_layout.cfg::TextFile::-1::1781747145::0::1::::<><><>0<>0<><>::
+editor_script_doc_cache.res::Resource::-1::1781747145::0::1::::<><><>0<>0<><>::
+editor_script_doc_cache.res-folding-a7de57390d6e786984ca20c70a831128.cfg::TextFile::-1::1781747145::0::1::::<><><>0<>0<><>::
+jugador.gd-folding-ed4052b5b368c7cb4f207e54dd1505da.cfg::TextFile::-1::1781747145::0::1::::<><><>0<>0<><>::
+mundo.gd-folding-78794cbfb6b6f84f16e086cf32a361b0.cfg::TextFile::-1::1781747145::0::1::::<><><>0<>0<><>::
+mundo.tscn-editstate-7007da6367635e832fa0ed2dd817d63f.cfg::TextFile::-1::1781747145::0::1::::<><><>0<>0<><>::
+mundo.tscn-folding-7007da6367635e832fa0ed2dd817d63f.cfg::TextFile::-1::1781747145::0::1::::<><><>0<>0<><>::
+project_metadata.cfg::TextFile::-1::1781747145::0::1::::<><><>0<>0<><>::
+script_editor_cache.cfg::TextFile::-1::1781747145::0::1::::<><><>0<>0<><>::
+::res://imported/::1781747145
+icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::CompressedTexture2D::2063494477516658731::1781747145::0::1::::<><><>0<>0<><>::
+::res://shader_cache/::1781747145
+::res://shader_cache/CanvasShaderGLES3/::1781747145
+::res://shader_cache/CanvasShaderGLES3/7d84adf767bd7d6dba234f271e8687519c67b2166f8a5f8c228e7fe2882d049d/::1781747145
+::res://shader_cache/CopyShaderGLES3/::1781747145
+::res://shader_cache/CopyShaderGLES3/642d7d88ea90fd36b5637bc96b33fb46f91c64e36b02e83bbea534ed776350f4/::1781747145
+::res://shader_cache/CubemapFilterShaderGLES3/::1781747145
+::res://shader_cache/CubemapFilterShaderGLES3/a94ade9606738ddc9e8111d3511a1391fc62b6107cf2a5b8b4600c4d225bcb9d/::1781747145
+::res://shader_cache/FeedShaderGLES3/::1781747145
+::res://shader_cache/FeedShaderGLES3/81e2e8f2297f23f6a61910eb2c7ac63ca6dc8ed063a344a2eeec3b5c08d7f769/::1781747145
+::res://shader_cache/PostShaderGLES3/::1781747145
+::res://shader_cache/PostShaderGLES3/55f82134502e1e1ccd576ce4c1172c7da57fb69a018c1cd6662ec27dcc241899/::1781747145
+::res://shader_cache/SceneShaderGLES3/::1781747145
+::res://shader_cache/SceneShaderGLES3/c2e1b82287dd1a1bb7c9ea568e7ef8102374b9cf29e5d7bbc2580727b72a32d0/::1781747145
+::res://shader_cache/SkyShaderGLES3/::1781747145
+::res://shader_cache/SkyShaderGLES3/841cb9ca7eeb3f05ce98196e8ca9a598fddab7ba27ce5d87ab1de94a0b3789bb/::1781747145
+::res://sprites/::1781907195
+image-Photoroom (11).png::CompressedTexture2D::2674743640823703999::1781903896::1781903897::1::::<><><>0<>0<>dd6523249ab58d337fdf7b2fa8814498<>res://.godot/imported/image-Photoroom (11).png-bbc33ae3346f8da40f6fe5994aeabb38.ctex::
+image-Photoroom (13).png::CompressedTexture2D::5216290529762652042::1781903896::1781903897::1::::<><><>0<>0<>e243ec1828fd92cf1f2b09d71eafde50<>res://.godot/imported/image-Photoroom (13).png-d7352f1529d092121befa8bf7b766406.ctex::
+image-Photoroom (14).png::CompressedTexture2D::2399345393556993965::1781903896::1781903897::1::::<><><>0<>0<>74209bda443cd464ff623e64500e06b3<>res://.godot/imported/image-Photoroom (14).png-09d70b032aa8d326173a6b10a88fa769.ctex::
+meta.png::CompressedTexture2D::9128162548494850033::1781907195::1781907195::1::::<><><>0<>0<>b1daabe5156862d0893b0e5fca3439f9<>res://.godot/imported/meta.png-9825dc3f02feccfd4ae4b95b5abca1f2.ctex::
+XGr30D.jpg::CompressedTexture2D::6205379521047891823::1781903896::1781903897::1::::<><><>0<>0<>9f065f447d682b82855cb87531515cd3<>res://.godot/imported/XGr30D.jpg-05b0829d1d44ad74b6b7d229d6be8f5d.ctex::

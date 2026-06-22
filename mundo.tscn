@@ -2,10 +2,15 @@
 
 [ext_resource type="Script" uid="uid://db440n8x04ruh" path="res://jugador.gd" id="1_6ba58"]
 [ext_resource type="Script" uid="uid://cgkd328bciee7" path="res://mundo.gd" id="1_lgngo"]
+[ext_resource type="Texture2D" uid="uid://cun6xumxj0keh" path="res://sprites/XGr30D.jpg" id="2_2hh7m"]
 [ext_resource type="PackedScene" uid="uid://t1td06j5i7ci" path="res://enemigo.tscn" id="3_fw4w5"]
 [ext_resource type="Script" uid="uid://hbr2t245h0k7" path="res://enemigo3.gd" id="4_aou4a"]
 [ext_resource type="Script" uid="uid://n17ua8c5k7ll" path="res://enemigo2.gd" id="4_otwa2"]
+[ext_resource type="Texture2D" uid="uid://bedwvwl3sqcgl" path="res://sprites/image-Photoroom (11).png" id="4_pfhxm"]
 [ext_resource type="Script" uid="uid://drkpylgkx3jtu" path="res://enemigo4.gd" id="5_5ckkb"]
+[ext_resource type="Texture2D" uid="uid://bagi4rre0j0i8" path="res://sprites/image-Photoroom (14).png" id="6_pij3u"]
+[ext_resource type="Texture2D" uid="uid://cgk2spu0w1ycw" path="res://sprites/image-Photoroom (13).png" id="8_t8jxu"]
+[ext_resource type="Texture2D" uid="uid://d3b0rec3tlj7f" path="res://sprites/meta.png" id="11_0oi55"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aou4a"]
 size = Vector2(39, 48)
@@ -46,6 +51,11 @@ size = Vector2(258.28674, 20)
 [node name="Mundo" type="Node2D" unique_id=353064206]
 script = ExtResource("1_lgngo")
 
+[node name="Fondo" type="Sprite2D" parent="." unique_id=9874456]
+position = Vector2(1560, 364.00003)
+scale = Vector2(9.002882, 3.3030305)
+texture = ExtResource("2_2hh7m")
+
 [node name="Jugador" type="CharacterBody2D" parent="." unique_id=634344494]
 position = Vector2(2, 0)
 script = ExtResource("1_6ba58")
@@ -55,6 +65,7 @@ position = Vector2(0.5, -25)
 shape = SubResource("RectangleShape2D_aou4a")
 
 [node name="ColorRect" type="ColorRect" parent="Jugador" unique_id=1420260561]
+visible = false
 offset_left = -20.0
 offset_top = -50.0
 offset_right = 20.0
@@ -62,6 +73,11 @@ color = Color(0.28892347, 0.7774376, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Jugador" unique_id=1246125471]
+
+[node name="PorotoSprite" type="Sprite2D" parent="Jugador" unique_id=2086255739]
+position = Vector2(1.4999995, -21.999998)
+scale = Vector2(0.50384617, 0.39285716)
+texture = ExtResource("4_pfhxm")
 
 [node name="Suelo" type="StaticBody2D" parent="." unique_id=896886237]
 position = Vector2(576, 400)
@@ -135,6 +151,11 @@ shape = SubResource("RectangleShape2D_otwa2")
 [node name="Enemigo" parent="." unique_id=473241796 instance=ExtResource("3_fw4w5")]
 position = Vector2(82, 355)
 
+[node name="CucharonSprite" type="Sprite2D" parent="Enemigo" unique_id=1477606368]
+position = Vector2(-4.5, 8.249989)
+scale = Vector2(0.29500002, 0.084166706)
+texture = ExtResource("6_pij3u")
+
 [node name="Enemigo2" parent="." unique_id=662716785 instance=ExtResource("3_fw4w5")]
 position = Vector2(1646, 357)
 script = ExtResource("4_otwa2")
@@ -142,12 +163,22 @@ velocidad = 300.0
 limite_izquierdo = 1650.0
 limite_derecho = 1910.0
 
+[node name="Sprite2D" type="Sprite2D" parent="Enemigo2" unique_id=885818589]
+position = Vector2(-5.5, 8.25)
+scale = Vector2(0.29500002, 0.084166706)
+texture = ExtResource("6_pij3u")
+
 [node name="Enemigo3" parent="." unique_id=1952181415 instance=ExtResource("3_fw4w5")]
 position = Vector2(2119, 356)
 script = ExtResource("4_aou4a")
 velocidad = 820.0
 limite_izquierdo = 2100.0
 limite_derecho = 2320.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemigo3" unique_id=1955643177]
+position = Vector2(-7.5, 9.25)
+scale = Vector2(0.29500002, 0.084166706)
+texture = ExtResource("6_pij3u")
 
 [node name="Suelo2" type="StaticBody2D" parent="." unique_id=1225077023]
 position = Vector2(1789, 215)
@@ -238,6 +269,21 @@ script = ExtResource("5_5ckkb")
 velocidad = 80.0
 limite_abajo = 190.0
 limite_arriba = 280.0
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2/Enemigo4" unique_id=199170078]
+position = Vector2(-5.5, 6.25)
+scale = Vector2(0.29500002, 0.084166706)
+texture = ExtResource("6_pij3u")
+
+[node name="FrijolSprite" type="Sprite2D" parent="." unique_id=1838643717]
+position = Vector2(243.00002, 221.00002)
+scale = Vector2(0.10520836, 0.07025763)
+texture = ExtResource("8_t8jxu")
+
+[node name="MetaSprite" type="Sprite2D" parent="." unique_id=2026799349]
+position = Vector2(3067.9995, 399)
+scale = Vector2(0.10054348, 0.13722827)
+texture = ExtResource("11_0oi55")
 
 [connection signal="body_entered" from="Enemigo" to="Jugador" method="_on_body_entered"]
 [connection signal="body_entered" from="Enemigo2" to="Jugador" method="_on_body_entered"]

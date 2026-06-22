@@ -7,11 +7,13 @@ position = Vector2(406, 371)
 script = ExtResource("1_becj5")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1070335083]
+visible = false
 position = Vector2(-10.335446, 3.7142925)
 scale = Vector2(1.3504585, 1.1232133)
 polygon = PackedVector2Array(-11.580643, -18.94278, 0.29032898, -5.6283875, 12.161285, -18.337585, 13.709671, 14.948456, -13, 15, -13, 0)
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=332446428]
+visible = false
 position = Vector2(-10.478249, 3.6489525)
 scale = Vector2(1.3478261, 1.0900699)
 polygon = PackedVector2Array(-11.580643, -18.94278, 0.29032898, -5.6283875, 12.161285, -18.337585, 13.709671, 14.948456, -13, 15, -13, 0)
