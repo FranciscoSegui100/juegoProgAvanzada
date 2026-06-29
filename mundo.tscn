@@ -4,16 +4,17 @@
 [ext_resource type="Script" uid="uid://cgkd328bciee7" path="res://mundo.gd" id="1_lgngo"]
 [ext_resource type="Texture2D" uid="uid://cun6xumxj0keh" path="res://sprites/XGr30D.jpg" id="2_2hh7m"]
 [ext_resource type="PackedScene" uid="uid://t1td06j5i7ci" path="res://enemigo.tscn" id="3_fw4w5"]
+[ext_resource type="Texture2D" uid="uid://cvj7k0ybok4d1" path="res://imported/imagen_rescatada.png" id="4_57gmc"]
 [ext_resource type="Script" uid="uid://hbr2t245h0k7" path="res://enemigo3.gd" id="4_aou4a"]
 [ext_resource type="Script" uid="uid://n17ua8c5k7ll" path="res://enemigo2.gd" id="4_otwa2"]
-[ext_resource type="Texture2D" uid="uid://bedwvwl3sqcgl" path="res://sprites/image-Photoroom (11).png" id="4_pfhxm"]
 [ext_resource type="Script" uid="uid://drkpylgkx3jtu" path="res://enemigo4.gd" id="5_5ckkb"]
 [ext_resource type="Texture2D" uid="uid://bagi4rre0j0i8" path="res://sprites/image-Photoroom (14).png" id="6_pij3u"]
 [ext_resource type="Texture2D" uid="uid://cgk2spu0w1ycw" path="res://sprites/image-Photoroom (13).png" id="8_t8jxu"]
 [ext_resource type="Texture2D" uid="uid://d3b0rec3tlj7f" path="res://sprites/meta.png" id="11_0oi55"]
+[ext_resource type="Script" uid="uid://d4gf727a8y7lm" path="res://sprite_2dEnemigo4.gd" id="12_57gmc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0oi55"]
-radius = 24.020824
+radius = 27.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ba58"]
 size = Vector2(466, 43)
@@ -57,9 +58,39 @@ font_size = 80
 process_mode = 3
 script = ExtResource("1_lgngo")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1579217844]
+
+[node name="LabelVidas" type="Label" parent="CanvasLayer" unique_id=1203872706]
+offset_left = 96.0
+offset_top = 49.0
+offset_right = 574.0
+offset_bottom = 72.0
+theme_override_font_sizes/font_size = 22
+
+[node name="LabelFrijoles" type="Label" parent="CanvasLayer" unique_id=750594128]
+offset_left = 91.0
+offset_top = 28.0
+offset_right = 569.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 19
+
+[node name="LabelControles" type="Label" parent="CanvasLayer" unique_id=57415825]
+offset_left = 170.0
+offset_top = 487.0
+offset_right = 648.0
+offset_bottom = 510.0
+
+[node name="LabelNivel" type="Label" parent="CanvasLayer" unique_id=1024461731]
+offset_left = 2020.0
+offset_top = 43.0
+offset_right = 2498.0
+offset_bottom = 150.0
+theme_override_colors/font_color = Color(0.15407446, 0.7659957, 0.1942881, 1)
+
 [node name="Fondo" type="Sprite2D" parent="." unique_id=9874456]
-position = Vector2(1560, 364.00003)
-scale = Vector2(9.002882, 3.3030305)
+position = Vector2(1137.5, -28.749939)
+scale = Vector2(11.43804, 6.703463)
 texture = ExtResource("2_2hh7m")
 
 [node name="Jugador" type="CharacterBody2D" parent="." unique_id=634344494]
@@ -68,7 +99,7 @@ position = Vector2(2, 0)
 script = ExtResource("1_6ba58")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador" unique_id=2127615131]
-position = Vector2(1, -30)
+position = Vector2(1, -33)
 shape = SubResource("CircleShape2D_0oi55")
 
 [node name="ColorRect" type="ColorRect" parent="Jugador" unique_id=1420260561]
@@ -82,9 +113,17 @@ metadata/_edit_use_anchors_ = true
 [node name="Camera2D" type="Camera2D" parent="Jugador" unique_id=1246125471]
 
 [node name="PorotoSprite" type="Sprite2D" parent="Jugador" unique_id=2086255739]
-position = Vector2(1.4999995, -21.999998)
+position = Vector2(-1, -35)
 scale = Vector2(0.50384617, 0.39285716)
-texture = ExtResource("4_pfhxm")
+texture = ExtResource("4_57gmc")
+
+[node name="LabelTiempo" type="Label" parent="Jugador" unique_id=534478239]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.99215686, 0.9529412, 0, 1)
+
+[node name="TimerRonda" type="Timer" parent="Jugador" unique_id=1393229549 groups=["enemigos"]]
+wait_time = 3.0
 
 [node name="Suelo" type="StaticBody2D" parent="." unique_id=896886237]
 position = Vector2(576, 400)
@@ -158,7 +197,7 @@ rotation = 1.3089969
 scale = Vector2(1.0000011, 1.0000011)
 shape = SubResource("RectangleShape2D_otwa2")
 
-[node name="Enemigo" parent="." unique_id=473241796 instance=ExtResource("3_fw4w5")]
+[node name="Enemigo" parent="." unique_id=473241796 groups=["enemigos"] instance=ExtResource("3_fw4w5")]
 process_mode = 1
 position = Vector2(82, 355)
 
@@ -168,7 +207,7 @@ position = Vector2(-4.5, 8.249989)
 scale = Vector2(0.29500002, 0.084166706)
 texture = ExtResource("6_pij3u")
 
-[node name="Enemigo2" parent="." unique_id=662716785 instance=ExtResource("3_fw4w5")]
+[node name="Enemigo2" parent="." unique_id=662716785 groups=["enemigos"] instance=ExtResource("3_fw4w5")]
 process_mode = 1
 position = Vector2(1646, 357)
 script = ExtResource("4_otwa2")
@@ -181,7 +220,7 @@ position = Vector2(-5.5, 8.25)
 scale = Vector2(0.29500002, 0.084166706)
 texture = ExtResource("6_pij3u")
 
-[node name="Enemigo3" parent="." unique_id=1952181415 instance=ExtResource("3_fw4w5")]
+[node name="Enemigo3" parent="." unique_id=1952181415 groups=["enemigos"] instance=ExtResource("3_fw4w5")]
 process_mode = 1
 position = Vector2(2119, 356)
 script = ExtResource("4_aou4a")
@@ -283,19 +322,6 @@ offset_bottom = 10.5237055
 rotation = 0.008726646
 color = Color(0.011764706, 0.84705883, 0, 1)
 metadata/_edit_use_anchors_ = true
-
-[node name="Enemigo4" parent="StaticBody2D2" unique_id=741889071 instance=ExtResource("3_fw4w5")]
-process_mode = 2
-position = Vector2(2735, 222)
-script = ExtResource("5_5ckkb")
-velocidad = 80.0
-limite_abajo = 190.0
-limite_arriba = 280.0
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2/Enemigo4" unique_id=199170078]
-position = Vector2(-5.5, 6.25)
-scale = Vector2(0.29500002, 0.084166706)
-texture = ExtResource("6_pij3u")
 
 [node name="FrijolSprite" type="Sprite2D" parent="." unique_id=1838643717]
 position = Vector2(243.00002, 221.00002)
@@ -491,40 +517,24 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="PantallaFin" unique_id=1579217844]
+[node name="Enemigo4" parent="." unique_id=741889071 groups=["enemigos"] instance=ExtResource("3_fw4w5")]
+position = Vector2(2737, 222)
+scale = Vector2(0.295, 0.1)
+script = ExtResource("5_5ckkb")
+velocidad = 80.0
+limite_abajo = 190.0
+limite_arriba = 280.0
 
-[node name="LabelVidas" type="Label" parent="PantallaFin/CanvasLayer" unique_id=1203872706]
-offset_left = 96.0
-offset_top = 49.0
-offset_right = 574.0
-offset_bottom = 72.0
-theme_override_font_sizes/font_size = 22
+[node name="Sprite2D" type="Sprite2D" parent="Enemigo4" unique_id=199170078]
+position = Vector2(-5.5, 6.25)
+scale = Vector2(0.29500002, 0.084166706)
+texture = ExtResource("6_pij3u")
+script = ExtResource("12_57gmc")
 
-[node name="LabelFrijoles" type="Label" parent="PantallaFin/CanvasLayer" unique_id=750594128]
-offset_left = 91.0
-offset_top = 28.0
-offset_right = 569.0
-offset_bottom = 51.0
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_font_sizes/font_size = 19
-
-[node name="LabelControles" type="Label" parent="PantallaFin/CanvasLayer" unique_id=57415825]
-offset_left = 170.0
-offset_top = 487.0
-offset_right = 648.0
-offset_bottom = 510.0
-
-[node name="LabelNivel" type="Label" parent="PantallaFin/CanvasLayer" unique_id=1024461731]
-offset_left = 2020.0
-offset_top = 43.0
-offset_right = 2498.0
-offset_bottom = 150.0
-theme_override_colors/font_color = Color(0.15407446, 0.7659957, 0.1942881, 1)
-
+[connection signal="timeout" from="Jugador/TimerRonda" to="Jugador" method="_on_timer_ronda_timeout"]
 [connection signal="body_entered" from="Enemigo" to="Jugador" method="_on_body_entered"]
 [connection signal="body_entered" from="Enemigo2" to="Jugador" method="_on_body_entered"]
 [connection signal="body_entered" from="Enemigo3" to="Jugador" method="_on_body_entered"]
-[connection signal="body_entered" from="StaticBody2D2/Enemigo4" to="Jugador" method="_on_body_entered"]
 [connection signal="pressed" from="MenuPrincipal/Jugar" to="." method="_on_boton_jugar_pressed"]
 [connection signal="pressed" from="MenuPrincipal/Salir" to="." method="_on_boton_salir_pressed"]
 [connection signal="pressed" from="MenuPausa/Reanudar" to="." method="_on_boton_reanudar_pressed"]
@@ -532,3 +542,4 @@ theme_override_colors/font_color = Color(0.15407446, 0.7659957, 0.1942881, 1)
 [connection signal="pressed" from="MenuPausa/Salir" to="." method="_on_boton_salir_pressed"]
 [connection signal="pressed" from="PantallaFin/ReiniciarFin" to="." method="_on_boton_reiniciar_fin_pressed"]
 [connection signal="pressed" from="PantallaFin/SalirFin" to="." method="_on_boton_salir_pressed"]
+[connection signal="body_entered" from="Enemigo4" to="Jugador" method="_on_body_entered"]

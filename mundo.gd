@@ -24,9 +24,8 @@ func _process(_delta):
 		$CanvasLayer/LabelControles.text = "Flechas: mover  |  Espacio: saltar  | ESC: Pausa"
 		$CanvasLayer/LabelNivel.text = " NIVEL FINAL! "
 		
-	# DETECTAR LA TECLA ESCAPE PARA PAUSAR
 	if Input.is_action_just_pressed("ui_cancel"):
-		print("-> [TECLA ESC] Se presionó la tecla Escape.")
+		
 		var menu_pr = get_node_or_null("CanvasLayer/MenuPrincipal") if has_node("CanvasLayer/MenuPrincipal") else get_node_or_null("MenuPrincipal")
 		var pant_fin = get_node_or_null("CanvasLayer/PantallaFin") if has_node("CanvasLayer/PantallaFin") else get_node_or_null("PantallaFin")
 		
@@ -66,8 +65,7 @@ func actualizar_posicion_frijol():
 
 func mostrar_pausa(activar: bool):
 	get_tree().paused = activar
-	print("-> [ESTADO DE PAUSA EN EL ÁRBOL]: ", activar)
-	
+
 	# Buscamos y mostramos/ocultamos el menú de pausa donde sea que esté
 	if has_node("MenuPausa"):
 		$MenuPausa.visible = activar
